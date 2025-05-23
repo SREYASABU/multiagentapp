@@ -1,5 +1,4 @@
 from google.adk.agents import LlmAgent
-import os
 
 
 competitor_identifier = LlmAgent(

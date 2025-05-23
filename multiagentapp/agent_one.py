@@ -4,16 +4,6 @@ from google.adk.tools import agent_tool
 
 from .agents.subagents.market_analyser.market_analyser import market_analyser
 from .agents.subagents.competitor_identifier.competitor_identifier import competitor_identifier
-import os
-
-from google.adk.models.lite_llm import LiteLlm
-
-
-
-
-# AGENT_MODEL = "ollama/qwen3:4b"
-AGENT_MODEL = "gemini/gemini-2.0-flash"
-# AGENT_MODEL = "gemini/gemini-2.5-flash-preview-05-20"
 
 
 root_agent = Agent(
