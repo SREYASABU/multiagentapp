@@ -1,5 +1,6 @@
 
 from google.adk.agents import Agent
+from google.adk.tools import agent_tool
 
 from .agents.subagents.market_analyser.market_analyser import market_analyser
 from .agents.subagents.competitor_identifier.competitor_identifier import competitor_identifier
@@ -26,7 +27,7 @@ root_agent = Agent(
         "you must then pass these results to the competitor_identifier to extract and list competitors. "
         "Do not answer the user query yourself directly. Always use the market_analyser first, then the competitor_identifier."
     ),
-    sub_agents=[market_analyser, competitor_identifier], 
-    tools=[],
+    sub_agents=[competitor_identifier], 
+    tools=[agent_tool.AgentTool(agent=market_analyser)],
 )
 
