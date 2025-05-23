@@ -1,8 +1,6 @@
 from google.adk.agents import LlmAgent
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
 
 competitor_identifier = LlmAgent(
     name="competitor_identifier",
